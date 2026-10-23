@@ -37,9 +37,9 @@ restates the prices and must be updated alongside `lib/site.ts`.
   LEAD_ALERT_FROM. Supabase vars are optional.
 - Status (Oct 23, 2026): project created, first deploy live at
   https://oklahomasecurityguardbond.vercel.app. LEAD_ALERT_TO and
-  LEAD_ALERT_FROM set. ANTHROPIC_API_KEY and RESEND_API_KEY still to be added,
-  then redeploy. Resend sending domain send.oklahomasecurityguardbond.com
-  added and GoDaddy DNS records (DKIM TXT, two CNAMEs) in place.
+  LEAD_ALERT_FROM, ANTHROPIC_API_KEY and RESEND_API_KEY (Full access) all set.
+  Resend sending domain send.oklahomasecurityguardbond.com verified. Marshal
+  test script passed 10/10 and a [Marshal Lead] alert was delivered.
 
 ## Post-deploy tests
 - Home page renders; every Get My Bond button opens the right ASC checkout in a new tab.
