@@ -9,7 +9,8 @@ import { Resend } from 'resend';
 
 // Short-term lead alerts by email until HubSpot workflows are wired.
 // Set RESEND_API_KEY and LEAD_ALERT_TO in Vercel env (Production).
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const RESEND_KEY = (process.env.RESEND_API_KEY || '').trim();
+const resend = RESEND_KEY ? new Resend(RESEND_KEY) : null;
 // Comma-separated list, so alerts can go to more than one inbox.
 const LEAD_ALERT_TO = (process.env.LEAD_ALERT_TO || 'service@oklahomasecurityguardbond.com')
   .split(',')

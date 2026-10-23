@@ -15,7 +15,8 @@ const SUPABASE_KEY =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
   '';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const RESEND_KEY = (process.env.RESEND_API_KEY || '').trim();
+const resend = RESEND_KEY ? new Resend(RESEND_KEY) : null;
 // Comma-separated list, so alerts can go to more than one inbox.
 const LEAD_ALERT_TO = (process.env.LEAD_ALERT_TO || 'service@oklahomasecurityguardbond.com')
   .split(',')
